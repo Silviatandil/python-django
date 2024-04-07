@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar todos los proveedores</title>
+</head>
+<body>
+    <h1>Lista de proveedores</h1>
+    {% for proveedor in proveedores %}
+    <li>{{proveedor.nombre}} - {{proveedor.apellido}} - {{proveedor.dni}}</li>
+    {% endfor %}
+
+</body>
+</html>

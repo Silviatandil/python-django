@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>plantillas</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+   <h2>Hola, {{estudiante}}</h2>
+  
+
+
+{% if estudiantes%}
+<hr>
+{% for estudiante in estudiantes %}
+    <h3>estudiante: {{estudiante.nombre}}</h3>
+    {% if estudiante.cursos_realizados %}
+    <h4>cursos realizados:</h4>
+<ul>
+    {% for curso in estudiante.cursos_realizados %}
+    <li> <b>{{curso.titulo}}</b> - <i>{{curso.desc}}</i></li>
+{% endfor%}
+</ul>
+{%else%}
+<h4>todavia no te anotaste a ningun curso</h4>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
